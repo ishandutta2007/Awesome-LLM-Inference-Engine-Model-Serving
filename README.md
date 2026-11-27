@@ -1,9 +1,5 @@
 # Awesome-LLM-Inference-Engine-Model-Serving
 
-# Awesome-LLM-Inference-Engine-Model-Serving
-
-
-
 Top LLM Inference Engine Model Serving (Opensource) 🌟 Star if you like it! 🌟
 
 
@@ -44,31 +40,22 @@ A curated list of top LLM inference engines, high-throughput GPU/CPU model servi
 
 ## SaaS/Hosted Platforms
 
-
-
 Commercial, cloud-hosted ultra-fast AI inference clouds, specialized LPU/WSE hardware endpoints, and managed serverless model serving APIs.
 
-
-
-* **[GroqCloud](https://groq.com)** - Ultra-low-latency AI inference cloud powered by custom LPU (Language Processing Unit) hardware delivering hundreds of tokens per second.
-
-* **[Cerebras Inference Cloud](https://cerebras.ai)** - Wafer-Scale Engine (WSE-3) cloud inference platform offering industry-leading token generation speeds for frontier open-weights LLMs.
-
-* **[SambaNova Cloud](https://sambanova.ai)** - Enterprise AI inference cloud running on Reconfigurable Dataflow Units (RDUs) for high-speed, massive-context LLM serving.
-
-* **[Together Inference Engine](https://together.ai)** - Managed cloud inference platform powered by FlashAttention and speculative decoding optimizations for open-source foundation models.
-
-* **[Fireworks AI](https://fireworks.ai)** - High-speed, low-latency generative AI inference cloud engineered with custom CUDA kernels and multi-LoRA serving.
-
-* **[vLLM Cloud / Red Hat AI Inference Server](https://redhat.com)** - Enterprise-supported cloud and hybrid deployments of vLLM with production SLAs, security hardening, and distributed scaling.
-
-* **[NVIDIA NIM (TensorRT-LLM & Triton Cloud)](https://nvidia.com)** - Managed cloud microservices packaging TensorRT-LLM and Triton Inference Server into enterprise-ready containers.
-
-* **[Hugging Face Inference Endpoints (Managed TGI)](https://huggingface.co)** - Dedicated, fully managed cloud deployment platform powered by Text Generation Inference (TGI) across AWS, GCP, and Azure.
-
-* **[Baseten](https://baseten.co)** - Commercial high-performance model serving infrastructure offering autoscaling GPU clusters, cold-start optimization, and TensorRT-LLM pipelines.
-
-* **[Modal / Replicate / DeepInfra](https://deepinfra.com)** - Serverless GPU cloud platforms providing instant API endpoints and pay-per-token inference for open-weights LLMs.
+| Platform | Description | Pricing (Starting Tier) | Free Tier Limits |
+| :--- | :--- | :--- | :--- |
+| **[GroqCloud](https://groq.com)** | Ultra-low-latency AI inference cloud powered by custom LPU (Language Processing Unit) hardware delivering hundreds of tokens per second. | Pay-as-you-go starting at $0.075 / 1M input tokens and $0.30 / 1M output tokens (GPT-OSS 20B) | Free tier available forever: up to 8,000–30,000 TPM (model-dependent), 200,000 tokens/day, 30 RPM, and 1,000 requests/day |
+| **[Cerebras Inference Cloud](https://cerebras.ai)** | Wafer-Scale Engine (WSE-3) cloud inference platform offering industry-leading token generation speeds for frontier open-weights LLMs. | Developer Tier starting at $0.35 / 1M input tokens and $0.75 / 1M output tokens (GPT-OSS 120B); subscription bundles from $50/month | Free trial with $5 one-time promotional credit valid for 30 days upon adding a payment method (no permanent free tier) |
+| **[SambaNova Cloud](https://sambanova.ai)** | Enterprise AI inference cloud running on Reconfigurable Dataflow Units (RDUs) for high-speed, massive-context LLM serving. | Developer Tier starting at $0.22 / 1M input tokens and $0.59 / 1M output tokens (gpt-oss-120b) | Free tier available forever: 20 requests/minute (RPM), 20 requests/day (RPD), and 200,000 tokens/day per model |
+| **[Together Inference Engine](https://together.ai)** | Managed cloud inference platform powered by FlashAttention and speculative decoding optimizations for open-source foundation models. | Pay-as-you-go starting at $0.15 / 1M input tokens and $0.50 / 1M output tokens (initial minimum credit deposit of $15) | No free tier or recurring free trial; strictly prepaid model with baseline starting rate limit of 1 RPS (60 RPM) |
+| **[Fireworks AI](https://fireworks.ai)** | High-speed, low-latency generative AI inference cloud engineered with custom CUDA kernels and multi-LoRA serving. | Pay-as-you-go starting at $0.10 / 1M input tokens and $0.30 / 1M output tokens (small/flash models) | Free trial with $1 one-time signup credit capped at 10 requests/minute (no permanent recurring free tier) |
+| **[Red Hat AI Inference Server](https://redhat.com)** | Enterprise-supported cloud and hybrid deployments of vLLM with production SLAs, security hardening, and distributed scaling. | Starting at $0.05 / GPU / hour on public cloud marketplaces; 1-year node subscription via enterprise sales | 60-day free trial evaluation available for Red Hat enterprise software platforms upon account registration |
+| **[NVIDIA NIM (build.nvidia.com)](https://nvidia.com)** | Managed cloud microservices packaging TensorRT-LLM and Triton Inference Server into enterprise-ready containers. | Self-hosted production licenses via NVIDIA AI Enterprise at $4,500 / GPU / year; cloud partner consumption pricing varies | Free developer account includes 1,000 free inference credits and up to 40 requests/minute (RPM) for prototyping |
+| **[Hugging Face Inference Endpoints](https://huggingface.co)** | Dedicated, fully managed cloud deployment platform powered by Text Generation Inference (TGI) across AWS, GCP, and Azure. | Dedicated GPU instances starting at ~$0.50 / hour (e.g., NVIDIA T4 / A10G); billed per hour running | No free tier for dedicated Inference Endpoints; free tier is limited to serverless Inference API with shared community rate limits |
+| **[Baseten](https://baseten.co)** | Commercial high-performance model serving infrastructure offering autoscaling GPU clusters, cold-start optimization, and TensorRT-LLM pipelines. | Pay-as-you-go GPU instance billing starting at ~$0.30 / hour (T4) or token APIs; $0 base platform fee | Free trial offering $30 one-time compute credits upon account setup (no permanent recurring free tier) |
+| **[Modal](https://modal.com)** | Serverless GPU cloud platform providing container-native execution, rapid cold-starts, and serverless inference runtimes. | Pay-per-second compute starting at ~$0.000164 / second (~$0.59 / hour for T4 GPU) | Free Starter tier forever includes $30 / month recurring compute credit (~50 hours of T4 GPU time, max 10 concurrent GPUs) |
+| **[Replicate](https://replicate.com)** | Serverless AI platform running open-source models via hosted cloud API with autoscaling. | Pay-per-second starting at ~$0.000140 / second (~$0.50 / hour for Nvidia T4) or per-token endpoints | Free trial collection allows running select public demo models for a limited initial batch of runs (no recurring free tier) |
+| **[DeepInfra](https://deepinfra.com)** | Pay-per-token and serverless GPU hosting platform providing instant API endpoints for open-weights LLMs. | Pay-as-you-go starting at $0.09 / 1M input tokens and $0.15 / 1M output tokens (e.g., Llama-3.1-8B) | No permanent free tier; accounts require credit card or prepayment; offers DeepStart startup credits program for eligible startups |
 
 
 
